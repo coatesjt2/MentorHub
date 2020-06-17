@@ -1,4 +1,5 @@
 ﻿using MentorHub.Models;
+using System;
 using System.Collections.Generic;
 
 namespace MentorHub.ViewModels
@@ -10,6 +11,9 @@ namespace MentorHub.ViewModels
         public string Time { get; set; }
         public byte Occupations { get; set; }
         public IEnumerable<Occupations> Profession { get; set; }
-
+        public DateTime DateTime 
+        {
+            get { return DateTime.Parse(string.Format("{0} {1}", Date, Time)); }
+        }
     }
 }

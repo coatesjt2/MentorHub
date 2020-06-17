@@ -33,7 +33,7 @@ namespace MentorHub.Controllers
             var sessions = new Sessions
             {
                 MentorId = User.Identity.GetUserId(),
-                DateTime = DateTime.Parse(string.Format("{0} {1}", viewModel.Date, viewModel.Time)),
+                DateTime = viewModel.DateTime,
                 OccupationsId = viewModel.Occupations,
                 Venue = viewModel.Venue
             };
