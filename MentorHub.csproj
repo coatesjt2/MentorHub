@@ -190,10 +190,21 @@
     <Compile Include="Migrations\202006170341454_InitialModel.Designer.cs">
       <DependentUpon>202006170341454_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006170400028_CreateSessionTable.cs" />
+    <Compile Include="Migrations\202006170400028_CreateSessionTable.Designer.cs">
+      <DependentUpon>202006170400028_CreateSessionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006170422510_OverrideConventionsforSessionsAndOccupations.cs" />
+    <Compile Include="Migrations\202006170422510_OverrideConventionsforSessionsAndOccupations.Designer.cs">
+      <DependentUpon>202006170422510_OverrideConventionsforSessionsAndOccupations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Occupations.cs" />
+    <Compile Include="Models\Sessions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -273,6 +284,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006170341454_InitialModel.resx">
       <DependentUpon>202006170341454_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006170400028_CreateSessionTable.resx">
+      <DependentUpon>202006170400028_CreateSessionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006170422510_OverrideConventionsforSessionsAndOccupations.resx">
+      <DependentUpon>202006170422510_OverrideConventionsforSessionsAndOccupations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
