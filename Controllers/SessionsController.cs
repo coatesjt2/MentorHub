@@ -1,7 +1,6 @@
 ﻿using MentorHub.Models;
 using MentorHub.ViewModels;
 using Microsoft.AspNet.Identity;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -21,7 +20,7 @@ namespace MentorHub.Controllers
         {
             var viewModel = new SessionsFormViewModel
             {
-                Profession =  _context.Occupations.ToList()
+                Profession = _context.Occupations.ToList()
             };
 
             return View(viewModel);
@@ -30,10 +29,17 @@ namespace MentorHub.Controllers
         [HttpPost]
         public ActionResult Create(SessionsFormViewModel viewModel)
         {
+            if (!ModelState.IsValid)//applied the not operator
+            {
+                viewModel.Profession = _context.Occupations.ToList();
+                return View("Create", viewModel);
+            }
+            
+
             var sessions = new Sessions
             {
                 MentorId = User.Identity.GetUserId(),
-                DateTime = viewModel.DateTime,
+                DateTime = viewModel.GetDateTime(),
                 OccupationsId = viewModel.Occupations,
                 Venue = viewModel.Venue
             };
