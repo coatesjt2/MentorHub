@@ -207,6 +207,10 @@
     <Compile Include="Migrations\202006171758222_AddForeignKeyPropertiesToSessions.Designer.cs">
       <DependentUpon>202006171758222_AddForeignKeyPropertiesToSessions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006181435461_ImplementValidation.cs" />
+    <Compile Include="Migrations\202006181435461_ImplementValidation.Designer.cs">
+      <DependentUpon>202006181435461_ImplementValidation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -309,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006171758222_AddForeignKeyPropertiesToSessions.resx">
       <DependentUpon>202006171758222_AddForeignKeyPropertiesToSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006181435461_ImplementValidation.resx">
+      <DependentUpon>202006181435461_ImplementValidation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
